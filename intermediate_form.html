@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+
+    <style>
+        form {
+            width: 700px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid #8c8c8c;
+            border-radius: .3rem;
+        }
+        h2 {
+            align-self: start;
+            margin-left: .5rem;
+            border-bottom: 1px solid #8c8c8c;
+        }
+        /* Comment CSS-Style */
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: 90%;
+        }
+        .grid > div {
+            margin-bottom: .5rem;
+            padding: 0 .5rem;
+        }
+
+        .grid > div:not(.sameforpayment) > label {
+            display: block;
+        }
+
+        .span2 {
+            grid-column: 1 / -1;
+        }
+        .span2 > input {
+            width: 100%;
+        }
+
+        .span2 > select {
+            width: 100%;
+        }
+
+        .grid > div:not(.buttons,.sameforpayment) > input {
+            width: 100%;
+        }
+
+        .buttons {
+            align-self: end;
+        }
+        .buttons > input {
+            padding: .5rem;
+            color: white;
+            background-color: rgba(0, 0, 180, 0.8);
+            border-radius: .4rem;
+            margin-right: 2rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <!-- Comment  -->
+    <form action="/result.html" method="post">
+        <div class="title">
+            <h1>Checkout</h1>
+        </div>
+        <div class="steps">
+            
+        </div>
+        <h2>Shipping Address</h2>
+
+        <div class="grid">
+            <div class="firstname">
+                <label for="firstname">First name</label>
+                <input required type="text" name="firstname" id="firstname">
+            </div>
+            <div class="lastname">
+                <label for="lastname">Last name</label>
+                <input required type="text" name="lastname" id="lastname">
+            </div>
+
+            <div class="address1 span2">
+                <label for="address1">Address line 1</label>
+                <input required type="text" name="address1" id="address1">
+            </div>
+            <div class="address2 span2">
+                <label for="address2">Address line 2</label>
+                <input type="text" name="address2" id="address2">
+            </div>
+
+            <div class="city">
+                <label for="city">City</label>
+                <input required type="text" name="city" id="city">
+            </div>
+            <div class="region">
+                <label for="region">Region</label>
+                <input type="text" name="region" id="region">
+            </div>
+            <div class="zip span2">
+                <label for="zip">Zip code</label>
+                <input maxlength="5" required type="text" name="zip" id="zip">
+            </div>
+            <div class="country span2">
+                <label for="country">Country</label>
+                <select required name="country" id="country">
+                    <option selected value="italy">Italy</option>
+                    <option value="germany">Germany</option>
+                    <option value="netherlands">Netherlands</option>
+                </select>
+            </div>
+
+            <div class="sameforpayment">
+                <input type="checkbox" name="sameforpayment" id="sameforpayment">
+                <label for="sameforpayment">Use this address for payment details</label>
+            </div>
+
+        </div>
+        <div class="buttons">
+            <input type="submit" value="NEXT">
+        </div>
+    </form>
+</body>
+</html>
