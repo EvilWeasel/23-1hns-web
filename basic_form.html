@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminvereinbarung</title>
+    <style>
+        form {
+            max-width: 500px;
+        }
+        label {
+            display: inline-block;
+            width: 200px;
+        }
+        form > div {
+            margin-bottom: 1rem;
+        }
+        div:not(.date) > input {
+            display: inline-block;
+            width: 220px;
+        }
+
+        input[type="submit"] {
+            background-color: rgba(103, 103, 203, 0.996);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Vereinbaren Sie einen Termin mit uns!</h2>
+
+    <form action="/result.html" method="post">
+        <div class="name">
+            <label for="name">Vor- und Nachname*</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="email">
+            <label for="email">Email*</label>
+            <input type="email" name="email" id="email" required>
+        </div>
+
+        <div class="url">
+            <label for="website">Webseite</label>
+            <input type="url" name="website" id="website">
+        </div>
+            
+        <div class="tel">
+            <label for="tel">Telefonnummer</label>
+            <input type="tel" name="tel" id="tel">
+        </div>
+
+        <div class="date">
+            <label for="date">Datum und Uhrzeit*</label>
+            <input type="date" name="date" id="date" required>
+            um
+            <input type="time" name="time" id="time" required>
+            Uhr
+        </div>
+
+        <div class="buttons">
+            <input type="submit" value="Absenden">
+            <input type="reset" value="Eingaben löschen">
+        </div>
+    </form>
+</body>
+
+</html>
