@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lutz und Grub: Academy</title>
+    <style>
+        img.logo {
+            width: 155px;
+            height: 120px;
+            margin: .8rem;
+        }
+        nav.nav-wrapper {
+            display: flex;
+            flex-direction: row;
+            margin: 0 auto;
+            width: 1200px;
+            justify-content: space-between;
+        }
+        nav .flex-col {
+            display: flex;
+            flex-direction: column;
+        }
+        nav .flex-row {
+            display: flex;
+            flex-direction: row;
+            align-self: end;
+        }
+        nav ul {
+            list-style-type: none;
+        }
+        nav ul>li {
+            margin: .5rem 1rem;
+        }
+        nav a {
+            text-decoration: none;
+            color: black;
+        }
+        nav a:hover {
+            color: rgb(160, 220, 240);
+        }
+
+        nav .flex-col > div {
+            font-size: .9em;
+        }
+        nav .flex-col > ul {
+            font-size: 1.3em;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-wrapper">
+        <img class="logo" src="./lug-logo.png" alt="Logo">
+
+        <div class="flex-col">
+            <div class="flex-row">
+                <ul class="flex-row">
+                    <li><a href="">Wir</a></li>
+                    <li><a href="">Jobs</a></li>
+                    <li><a href="">digitale Niederlassung</a></li>
+                    <li><a href="">Deutsch</a></li>
+                </ul>
+                <ul class="flex-row contact-icons"
+                    style="display: none;">
+
+                </ul>
+            </div>
+            <ul class="flex-row">
+                <li><a href="">Lernende</a></li>
+                <li><a href="">Angebot</a></li>
+                <li><a href="">Kursnet</a></li>
+                <li><a href="">Unternehmenskunden</a></li>
+                <li><a href="">Methodenkompetenz</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+</body>
+</html>
