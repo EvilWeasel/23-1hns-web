@@ -33,7 +33,8 @@
     <form action="/result.html" method="post">
         <div class="name">
             <label for="name">Vor- und Nachname*</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" required
+                maxlength="5">
         </div>
 
         <div class="email">
@@ -43,7 +44,7 @@
 
         <div class="url">
             <label for="website">Webseite</label>
-            <input type="url" name="website" id="website">
+            <input type="url" name="website" id="website" placeholder="https://">
         </div>
             
         <div class="tel">
