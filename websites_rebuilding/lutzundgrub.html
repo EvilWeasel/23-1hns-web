@@ -44,6 +44,10 @@
         }
 
         nav ul>li {
+            margin: .5rem .5rem;
+        }
+
+        nav ul.text-regular > li {
             margin: .5rem 1rem;
         }
 
@@ -68,12 +72,20 @@
             font-weight: 400;
         }
 
-        nav ul.contact-icons button {
-            padding: .5rem 1.7rem;
+        nav ul.contact-icons a.linkBtnText {
+            padding: .4rem 1.9rem;
             background-color: rgb(52, 57, 64);
             color: white;
             border: 1px solid black;
-            border-radius: 1rem;
+            border-radius: 2rem;
+        }
+
+        nav ul.contact-icons a.linkBtnIcon {
+            padding: .6rem .5rem .3rem .5rem;
+            background-color: rgb(52, 57, 64);
+            color: white;
+            border: 1px solid black;
+            border-radius: 2rem;
         }
 
         .my-auto {
@@ -83,6 +95,27 @@
         ul.contact-icons svg {
             width: 16px;
             height: 16px;
+        }
+
+        section.hero {
+            height: 80vh;
+            display: flex;
+            flex-direction: row;
+        }
+
+        section.hero > div {
+            max-width: 50vw;
+        }
+        .hero-text {
+            margin: 0 4rem 0 auto;
+        }
+        .hero-text p {
+            max-width: 45ch;
+        }
+        .hero-image > img {
+            object-fit: contain;
+            width: 100%;
+            height: auto;
         }
     </style>
 </head>
@@ -101,7 +134,7 @@
                 </ul>
                 <ul class="flex-row contact-icons">
                     <li>
-                        <button>
+                        <a href="" class="linkBtnIcon">
                             <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
                                 style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2"
                                 class="inline-block h-4 w-4">
@@ -109,10 +142,10 @@
                                     d="M32 24c0 2.21-1.79 4-4 4H4c-2.21 0-4-1.79-4-4V13.754l15.258 6.104c.238.096.488.142.742.142s.504-.046.742-.142L32 13.754V24Zm0-14.554-16 6.4-16-6.4V8c0-2.21 1.79-4 4-4h24c2.21 0 4 1.79 4 4v1.446Z"
                                     fill="currentColor"></path>
                             </svg>
-                        </button>
+                        </a>
                     </li>
                     <li>
-                        <button>
+                        <a href="" class="linkBtnIcon">
                             <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
                                 style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2"
                                 class="inline-block h-4 w-4">
@@ -120,9 +153,9 @@
                                     d="m31.95 24.188-1.452 6.298A1.943 1.943 0 0 1 28.592 32C12.828 32 0 19.174 0 3.406a1.94 1.94 0 0 1 1.514-1.902L7.81.05a1.97 1.97 0 0 1 2.242 1.134l2.908 6.784c.34.8.11 1.73-.562 2.278l-3.364 2.756a21.85 21.85 0 0 0 9.97 9.968l2.754-3.362a1.944 1.944 0 0 1 2.28-.56l6.78 2.906a1.957 1.957 0 0 1 1.132 2.234Z"
                                     fill="currentColor"></path>
                             </svg>
-                        </button>
+                        </a>
                     </li>
-                    <li><button>Kontakt</button></li>
+                    <li><a href="" class="linkBtnText">Kontakt</a></li>
                 </ul>
             </div>
             <ul class="flex-row text-regular">
@@ -135,6 +168,27 @@
         </div>
     </nav>
 
+
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Why?</h1>
+                <div>
+                    <p>Die digitale Transformation stellt Unternehmen, Mitarbeitende und Lernende vor große Herausforderungen. Jeder steht vor der Notwendigkeit, neue Kompetenzen aufzubauen -  die stetige Entwicklung digitaler Prozesse wird letztlich von Menschen vorangetrieben.</p>
+                    <p>Wir, die LUTZ + GRUB ACADEMY GmbH, befähigen zum adaptiven und lebenslangen Lernen, um individuell und kollektiv erfolgreich handeln zu können.</p>
+                    <p>Durch innovative und Kontext angepasste Lernmethoden erreichen Organisationen und Lernende Kompetenzen, um ihre beruflichen Ziele zu erreichen.</p>
+                    <p>Adaptive Growing® - be competent!</p>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="../assets/images/die3fragezeichen.avif" alt="Lernparty@LUG">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
 
 </body>
 

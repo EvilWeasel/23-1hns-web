@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,45 +15,50 @@
             border: 1px solid #8c8c8c;
             border-radius: .3rem;
         }
+
         h2 {
             align-self: start;
             margin-left: .5rem;
             border-bottom: 1px solid #8c8c8c;
         }
+
         /* Comment CSS-Style */
         .grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             width: 90%;
         }
-        .grid > div {
+
+        .grid>div {
             margin-bottom: .5rem;
             padding: 0 .5rem;
         }
 
-        .grid > div:not(.sameforpayment) > label {
+        .grid>div:not(.sameforpayment)>label {
             display: block;
         }
 
         .span2 {
             grid-column: 1 / -1;
         }
-        .span2 > input {
+
+        .span2>input {
             width: 100%;
         }
 
-        .span2 > select {
+        .span2>select {
             width: 100%;
         }
 
-        .grid > div:not(.buttons,.sameforpayment) > input {
+        .grid>div:not(.buttons, .sameforpayment)>input {
             width: 100%;
         }
 
         .buttons {
             align-self: end;
         }
-        .buttons > input {
+
+        .buttons>input {
             padding: .5rem;
             color: white;
             background-color: rgba(0, 0, 180, 0.8);
@@ -64,6 +70,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Comment  -->
     <form action="/result.html" method="post">
@@ -71,7 +78,7 @@
             <h1>Checkout</h1>
         </div>
         <div class="steps">
-            
+
         </div>
         <h2>Shipping Address</h2>
 
@@ -119,11 +126,11 @@
                 <input type="checkbox" name="sameforpayment" id="sameforpayment">
                 <label for="sameforpayment">Use this address for payment details</label>
             </div>
-
         </div>
         <div class="buttons">
             <input type="submit" value="NEXT">
         </div>
     </form>
 </body>
+
 </html>
