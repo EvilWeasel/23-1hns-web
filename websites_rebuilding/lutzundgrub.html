@@ -99,23 +99,23 @@
         }
 
         section.hero {
-            height: 80vh;
+            margin-bottom: 4rem;
             display: flex;
             flex-direction: row;
         }
 
-        section.hero > div {
+        section.hero > div.hero-text {
             max-width: 50vw;
-        }
-        .hero-text {
             margin: 0 4rem 0 auto;
+        }
+        section.hero > div.hero-image {
+            width: 50vw;
         }
         .hero-text p {
             max-width: 45ch;
         }
         .hero-image > img {
             object-fit: none;
-            width: 100%;
             height: auto;
             overflow-x: hidden;
         }
@@ -198,7 +198,22 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="../assets/images/postit-laptop-hero.avif" alt="Big Business">
+                <img src="../assets/images/postit-laptop-hero.avif" alt="Big Business"
+                width="640"
+                height="640"
+                style="height: auto; width: 640px;">
+            </div>
+        </section>
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Mit Spaß und Kompetenz zum Erfolg!</h1>
+                <p>Lernen besteht aus eigenmotivierter Wissensaufnahme, lösen von Herausforderungen und dem interaktiven Austausch in Gruppen. Dabei durchläuft jeder Lernende seine individuellen Lernpfade von der Ausgangsbasis, bisheriger Lernerfahrung, bis zur Zielsetzung mit seinen bevorzugten Kanälen zur Erreichung der relevanten Kompetenz. New Learning verbindet die Elemente Training, Coaching, Erfahrungsaufbau mit den digitalen Tools (Plattformen) und den persönlichen, wie digitalen Inhalten - genau der Lernpfad, den Lernende individuell benötigen, um schnell  notwendige Kompetenzen zu erlangen.</p>
+            </div>
+            <div class="hero-image">
+                <img src="../assets/images/shocking-coffee.avif" alt="Drinking Coffee"
+                width="640"
+                height="427"
+                style="width: 640px; height: auto;">
             </div>
         </section>
     </main>
