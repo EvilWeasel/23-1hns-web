@@ -12,6 +12,7 @@
     <style>
         html {
             font-family: 'Transat Text', Roboto, Helvetica, Arial, sans-serif;
+            overflow-x: hidden;
         }
 
         img.logo {
@@ -113,9 +114,10 @@
             max-width: 45ch;
         }
         .hero-image > img {
-            object-fit: contain;
+            object-fit: none;
             width: 100%;
             height: auto;
+            overflow-x: hidden;
         }
     </style>
 </head>
@@ -181,7 +183,22 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="../assets/images/die3fragezeichen.avif" alt="Lernparty@LUG">
+                <img src="../assets/images/die3fragezeichen.avif" alt="Lernparty@LUG"
+                width="1080"
+                height="720"
+                style="height: 720px; width: 1080px;">
+            </div>
+        </section>
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Digitalisierung mit persönlichem Erfolg?</h1>
+                <div>
+                    <p>Lernen, Anpassungsfähigkeit und Schnelligkeit sind heute die Basis für Erfolg. Ohne ein entsprechendes Mindset, Skillset und Toolset ist dies nicht zu schaffen. Handlungskompetente Menschen unterstützen die Veränderung aktiv, tragen zum Erfolg bei, leben Eigeninitiative, übernehmen Verantwortung und managen sich selbst.</p>
+                    <p>In Zeiten der digitalen Transformation im Privatleben, wie auch im beruflichen Umfeld werden Prozesse digital unterstützt oder neu geschaffen. Die LUTZ + GRUB ACADEMY GmbH hilft Menschen und Unternehmen dabei, notwendige Kompetenzen im digitalen Umfeld zu identifizieren und aufzubauen - mit Spaß und Erfolg von der IT-Technologie über Prozesse bis zur Methodik!</p>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="../assets/images/postit-laptop-hero.avif" alt="Big Business">
             </div>
         </section>
     </main>
