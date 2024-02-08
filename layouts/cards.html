@@ -6,14 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cards</title>
     <style>
+        section.card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
         .card {
             width: 300px;
-            background-color: rgba(100, 100, 100, .1);
+            background-color: rgba(100, 100, 100, 0.1);
             /* border: 1px solid #8c8c8c; */
             border-radius: 1rem;
             box-shadow: 5px 5px 15px #8c8c8c;
+            transition: all .5s ease-in-out;
         }
-
+        /* Pseudo-Klasse / Pseudo-Class */
+        .card:hover {
+            box-shadow: 0 0 15px #d839c8;
+            cursor: pointer;
+        }
         .card img {
             margin-bottom: 1rem;
             padding: 0;
@@ -44,16 +54,33 @@
 </head>
 
 <body>
-    <div class="card">
-        <img src="https://picsum.photos/300/200" alt="Image">
-        <div class="card-text">
-            <p class="tag">Technology</p>
-            <h1>Why is the Tesla Cybertruck designed the way it is?</h1>
-            <p class="card-body">An exploration into the truck's polarising design.</p>
+    <section class="card-container">
+        <div class="card">
+            <img src="https://picsum.photos/300/200" alt="Image">
+            <div class="card-text">
+                <p class="tag">Technology</p>
+                <h1>Why is the Tesla Cybertruck designed the way it is?</h1>
+                <p class="card-body">An exploration into the truck's polarising design.</p>
+            </div>
         </div>
+        <div class="card">
+            <img src="https://picsum.photos/300/200" alt="Image">
+            <div class="card-text">
+                <p class="tag">Technology</p>
+                <h1>Why is the Tesla Cybertruck designed the way it is?</h1>
+                <p class="card-body">An exploration into the truck's polarising design.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://picsum.photos/300/200" alt="Image">
+            <div class="card-text">
+                <p class="tag">Technology</p>
+                <h1>Why is the Tesla Cybertruck designed the way it is?</h1>
+                <p class="card-body">An exploration into the truck's polarising design.</p>
+            </div>
+        </div>
+    </section>
 
-
-    </div>
 
 </body>
 
