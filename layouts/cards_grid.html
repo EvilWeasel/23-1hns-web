@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cards - Flexbox</title>
+    <title>Cards - Grid</title>
     <style>
         section.card-container {
-            display: flex;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            place-items: center;
             gap: 2rem;
-            justify-content: center;
         }
         .card {
             width: 300px;
@@ -56,6 +56,22 @@
 
 <body>
     <section class="card-container">
+        <div class="card">
+            <img src="https://picsum.photos/300/200" alt="Image">
+            <div class="card-text">
+                <p class="tag">Technology</p>
+                <h1>Why is the Tesla Cybertruck designed the way it is?</h1>
+                <p class="card-body">An exploration into the truck's polarising design.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://picsum.photos/300/200" alt="Image">
+            <div class="card-text">
+                <p class="tag">Technology</p>
+                <h1>Why is the Tesla Cybertruck designed the way it is?</h1>
+                <p class="card-body">An exploration into the truck's polarising design.</p>
+            </div>
+        </div>
         <div class="card">
             <img src="https://picsum.photos/300/200" alt="Image">
             <div class="card-text">
