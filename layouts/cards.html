@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,15 +8,22 @@
     <style>
         .card {
             width: 300px;
-            background-color: #8c8c8c;
+            background-color: rgba(100, 100, 100, .1);
             /* border: 1px solid #8c8c8c; */
             border-radius: 1rem;
-            padding: 1rem;
             box-shadow: 5px 5px 15px #8c8c8c;
         }
+
         .card img {
             margin-bottom: 1rem;
+            padding: 0;
+            border-radius: 1rem 1rem 0 0;
         }
+
+        .card div.card-text {
+            padding: 1rem;
+        }
+
         .card p.tag {
             display: inline;
             border-radius: 1rem;
@@ -23,14 +31,30 @@
             color: white;
             padding: .2rem .5rem;
         }
+
+        .card h1 {
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+
+        .card p.card-body {
+            font-size: 1.2rem;
+        }
     </style>
 </head>
+
 <body>
     <div class="card">
         <img src="https://picsum.photos/300/200" alt="Image">
-        <p class="tag">Technology</p>
-        <h1>Why is the Tesla Cybertruck designed the way it is?</h1>
-        <p>An exploration into the truck's polarising design.</p>
+        <div class="card-text">
+            <p class="tag">Technology</p>
+            <h1>Why is the Tesla Cybertruck designed the way it is?</h1>
+            <p class="card-body">An exploration into the truck's polarising design.</p>
+        </div>
+
+
     </div>
+
 </body>
+
 </html>
