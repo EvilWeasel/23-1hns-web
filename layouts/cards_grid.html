@@ -8,6 +8,8 @@
     <style>
         section.card-container {
             display: grid;
+            /* Erstellt 3 gleiche columns im Grid, welche min-width 200px und max-width 400px haben. Dadurch können sich die columns dynamisch je nach viewport-width anpassen.  
+            repeat(3, minmax(200px, 400px)) */
             grid-template-columns: 1fr 1fr 1fr 1fr;
             place-items: center;
             gap: 2rem;
