@@ -124,3 +124,39 @@ console.log(new Date(feierabend).toLocaleTimeString());
 const my_time = new Date("1.1.2020");
 console.log(my_time.toLocaleDateString());
 
+// console.log(new Date().toLocaleTimeString());
+
+class Weinbergschnecke {
+    constructor(name, schleimmenge) {
+        this.name = name;
+        // in ml
+        this.schleimmenge = schleimmenge;
+    }
+    get reichweite() {
+        if (this.schleimmenge < 10) {
+            return 0;
+        }
+        return this.schleimmenge / 10;
+    }
+    set tanken(menge) {
+        this.schleimmenge = this.schleimmenge + menge;
+    }
+    schlunzen() {
+        if (this.schleimmenge >= 10) {
+            console.log(`${this.name} schlunzt 1 Meter nach vorne.`);
+            this.schleimmenge = this.schleimmenge - 10;
+        } else {
+            console.log(`${this.name} hat nicht genug schleim und kann sich nicht mehr bewegen.`);
+        }
+    }
+}
+
+const schnegge = new Weinbergschnecke("Josef", 30);
+console.log(schnegge.name);
+schnegge.schlunzen();
+schnegge.schlunzen();
+console.log(schnegge.schleimmenge);
+console.log(schnegge.reichweite);
+
+schnegge.tanken = 10;
+console.log(schnegge.schleimmenge);
