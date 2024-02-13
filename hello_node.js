@@ -83,6 +83,44 @@ console.log(variable_string);
 // String-Methoden
 console.log(variable_string.toUpperCase());
 
+/**
+ * NULL VS Undefined
+ * 
+ * Undefined bekommt man meist, wenn eine Variable Deklariert aber NICHT Initialisiert ist oder es irgendeinen anderen Fehler von JS gibt.
+ * NULL ist ein Signal, dass ich einen Fehler beim Aufrufen einer Funktion oder Methode gemacht habe.
+ * NULL verwendet man als Signal an andere Entwickler, dass man die Methode oder Funktion mit falschen Parametern oder ähnliches aufgerufen hat.
+ */
+
 // Nur Deklaration
 let oma;
-console.log(oma);
+//console.log(oma);
+let emoji = get_emoji("so lala...");
+if (emoji != null) {
+    console.log(emoji);
+}
+
+
+function get_emoji(feeling) {
+    if (feeling == "sad") {
+        return "🥲";
+    }
+    else if (feeling == "happy") {
+        return "😀";
+    }
+    else {
+        return null;
+    }
+}
+
+// Komplexe Datentypen => Referenztypen
+
+// Date
+let now = new Date();
+// let minute = now.getMinutes();
+const feierabend = now.setHours(16);
+console.log(new Date(feierabend).toLocaleTimeString());
+
+// Konvertiere String in Datum
+const my_time = new Date("1.1.2020");
+console.log(my_time.toLocaleDateString());
+
