@@ -29,7 +29,8 @@ greeting("Hier könnte Ihre Werbung stehen!");
 // Dieser Prozess nennt sich "Hoisting"
 function greeting(message) {
     console.log("Hallo und Wilkommen!");
-    console.log(`Schönes Wetter haben wir, {} übrigens... \n${message}`);
+    console.log(`Schönes Wetter haben wir
+        , {} übrigens... \n${message}`);
     // Console.WriteLine($"Bla {Test} {Test2}");
 }
 
@@ -61,3 +62,27 @@ const num2 = 0.2;
 console.log(num1 + num2); // Floating-Point Rounding Error
 // Verhält sich genau wie im Dezimalsystem:
     // 0.33333 + 0.33333 + 0.33333 = 1
+
+
+// Strings 
+// Verkettungen von Chars - Char-Array in C#
+// In JavaScript gibt es nur Strings, keine Chars
+
+const my_string1 = "ABC";
+const my_string2 = 'ABC'; // const string = "sdfkljl'
+const my_string3 = "ERROR: Variable 'x' is not valid....";
+// Interpolated String - Template String
+// Kann über mehrere Zeilen gehen, aber mit übernahme der Formattierung
+const my_interpolated = `${my_string1} ${my_string2}`;
+
+let variable_string = "abc";
+variable_string = "def"; // Hier wird der Variablen eine neue Referenz auf einen neuen String gegeben.
+// Der String "abc" ist wie alle Strings immutable (nicht veränderbar)
+console.log(variable_string);
+
+// String-Methoden
+console.log(variable_string.toUpperCase());
+
+// Nur Deklaration
+let oma;
+console.log(oma);
