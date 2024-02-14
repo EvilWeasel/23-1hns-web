@@ -43,6 +43,10 @@ const user_input = Number.parseInt(my_string);
 const my_bools = false;
 if (my_bools) {
     console.log("Dieser Text wird niemals ausgegeben.");
+} else if (false) {
+
+} else {
+    
 }
 
 // Numbers
@@ -70,10 +74,11 @@ console.log(num1 + num2); // Floating-Point Rounding Error
 
 const my_string1 = "ABC";
 const my_string2 = 'ABC'; // const string = "sdfkljl'
-const my_string3 = "ERROR: Variable 'x' is not valid....";
+const my_string3 = 'ERROR: Variable "x" is not valid....';
 // Interpolated String - Template String
 // Kann über mehrere Zeilen gehen, aber mit übernahme der Formattierung
 const my_interpolated = `${my_string1} ${my_string2}`;
+// public string test = $"{var1} buxtehude {var2}";
 
 let variable_string = "abc";
 variable_string = "def"; // Hier wird der Variablen eine neue Referenz auf einen neuen String gegeben.
@@ -126,7 +131,15 @@ console.log(my_time.toLocaleDateString());
 
 // console.log(new Date().toLocaleTimeString());
 
+/**
+ * Eine ganz einfache Klasse, ganz ähnlich wie in C#
+ * 
+ * Unterschiede: Keine Access-Modifier - Kein public, private
+ * Getter und Setter nur als "Syntactic Sugar" - Wenig Sinn wegen fehlenden Access-Modifier
+ * Keine Deklaration von Properties und Feldern außerhalb des Konstruktors - Konstruktor gibt alle Eigenschafter der Instanz vor.
+ */
 class Weinbergschnecke {
+    // in C#: Weinbergschnecke(string name, int schleimmenge) {}
     constructor(name, schleimmenge) {
         this.name = name;
         // in ml
@@ -149,6 +162,10 @@ class Weinbergschnecke {
             console.log(`${this.name} hat nicht genug schleim und kann sich nicht mehr bewegen.`);
         }
     }
+    schlunzen_essen(callbackfn) {
+        this.schlunzen();
+        callbackfn();
+    }
 }
 
 const schnegge = new Weinbergschnecke("Josef", 30);
@@ -160,3 +177,51 @@ console.log(schnegge.reichweite);
 
 schnegge.tanken = 10;
 console.log(schnegge.schleimmenge);
+
+schnegge.schlunzen_essen(_ => {
+    console.log("Die Schnecke isst einen Salat");
+});
+
+schnegge.schlunzen_essen(_ => {
+    console.log("Blabla");
+});
+// schnegge.schlunzen_essen();
+
+// Generator Functions
+let my_array = [1,2,3,4,5];
+
+my_array.forEach(elem => {
+    console.log(elem);
+});
+
+// C#: foreach(elem in my_array) { Console.WriteLine(elem) }
+let xy = 10;
+while (xy > 0) {
+    console.log(xy);
+    xy = xy - 1;
+}
+// for (let i = 0; i < array.length; i++) {
+//     const element = array[i];
+    
+// }
+
+
+function* quadratzahlen_generator() {
+    let i = 1
+    while (true) {
+        yield i**2;
+        i += 1;
+    }
+}
+
+let number_generator = quadratzahlen_generator();
+console.log(number_generator);
+
+for (let i = 0; i < 5; i++) {
+    console.log(number_generator.next().value);
+}
+
+console.log(number_generator.next().value);
+let number_generator2 = quadratzahlen_generator();
+console.log(number_generator2.next().value);
+
