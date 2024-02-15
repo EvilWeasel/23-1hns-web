@@ -1,43 +1,57 @@
 ---
-
+import { Icon } from 'astro-icon/components';
 ---
 
 <nav>
-    <div class="logo">
-        <p>Lorem, ipsum.</p>
-    </div>
-    <ul class="nav-links">
-        <li><a href="">About Me</a></li>
-        <li><a href="">Projects</a></li>
-        <li><a href="">Contact</a></li>
-    </ul>
-    <div class="theme-switch">
-        <p>Lorem, ipsum.</p>
-    </div>
+  <div class="logo">
+    <p>Lorem, ipsum.</p>
+  </div>
+  <ul class="nav-links">
+    <li><a href="">About Me</a></li>
+    <li><a href="">Projects</a></li>
+    <li><a href="">Contact</a></li>
+  </ul>
+  <div class="theme-switch">
+    <Icon name="mdi:shield-moon" />
+    <Icon name="mdi:shield-sun" />
+  </div>
 </nav>
 
 <style>
-    nav {
-        display: flex;
-        flex-direction: row;
-        color: #cfcfcf;
-        justify-content: space-between;
-    }
-    nav ul {
-        list-style-type: none;
-        padding-left: 0;
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-        font-size: 1.2em;
-    }
-    nav ul li a {
-        color: #cfcfcf;
-        text-decoration: none;
-        transition: all .5s ease-out;
-    }
-    nav ul li a:hover {
-        text-shadow: 0px 0px 15px #da6bff;
-        color: #da6bff;
-    }
+  nav {
+    display: flex;
+    flex-direction: row;
+    color: #cfcfcf;
+    justify-content: space-between;
+  }
+  nav ul {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    font-size: 1.2em;
+  }
+  nav ul li a {
+    color: #cfcfcf;
+    text-decoration: none;
+    transition: all 0.5s ease-out;
+  }
+  nav ul li a:hover {
+    text-shadow: 0px 0px 15px #da6bff;
+    color: #da6bff;
+  }
+  .dark-mode {
+    background-color: #1a1a1a;
+    color: #ffffff;
+  }
+
+  .dark-mode nav ul li a {
+    color: #ffffff;
+  }
+
+  .dark-mode nav ul li a:hover {
+    text-shadow: 0px 0px 15px #6b63ff;
+    color: #6b63ff;
+  }
 </style>
