@@ -14,7 +14,7 @@ import me from "../assets/me.webp";
         </div>
     </div>
     <div class="hero-image">
-        <Image src={me} alt="Ich, einfach unverbesserlich."/>
+        <Image src={me} alt="Ich, einfach unverbesserlich." id={"me-image"}/>
     </div>
 </section>
     
@@ -23,6 +23,7 @@ import me from "../assets/me.webp";
         margin-bottom: 4rem;
         display: flex;
         flex-direction: row;
+        height: 90vh;
     }
 
     section.hero > div.hero-text {
@@ -35,9 +36,10 @@ import me from "../assets/me.webp";
     .hero-text p {
         max-width: 45ch;
     }
-    .hero-image > img {
-        object-fit: none;
-        height: auto;
+    .hero-image > #me-image {
+        object-fit: cover;
+        height: 100%;
         overflow-x: hidden;
+        width: 100%;
     }
 </style>
