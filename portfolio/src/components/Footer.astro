@@ -1,0 +1,47 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<footer>
+    <h2>Tobias Wehrle</h2>
+    <ul>
+        <li><a href="">About Me</a></li>
+        <li><a href="">Projects</a></li>
+        <li><a href="">Contact</a></li>
+        <li><a href="https://www.amnesty.org/en/donate/" target="_blank">DONATE!</a></li>
+    </ul>
+    <ul>
+        <li><a href=""><Icon name="mdi:mastodon"/></a></li>
+        <li><a href=""><Icon name="mdi:youtube"/></a></li>
+        <li><a href=""><Icon name="mdi:instagram"/></a></li>
+    </ul>
+    <p>Copyright 2024™️ All rights reserved</p>
+</footer>
+
+<style>
+    footer {
+        position: block;
+        width: 100%;
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        margin-top: 10px;
+    }
+    footer ul {
+        list-style: none;
+        margin: 20px;
+        padding: 0;
+    }
+    footer ul>li {
+        display: inline;
+        padding-inline: 10px 10px;
+    }
+    footer a {
+        text-decoration: none;
+        color: gold;
+        transition: color .3s ease;
+    }
+    footer a:hover {
+        color: chocolate;
+    }
+</style>
