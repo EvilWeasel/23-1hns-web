@@ -5,7 +5,12 @@ import Progress from "../components/Progress.astro";
 
 <Layout title="Welcome to Astro.">
   <main>
-    <Progress lang="TypeScript" color="blue" progress="50" />
+    <div class="learning-progress">
+      <Progress lang="TypeScript" color="blue" progress="60" />
+      <Progress lang="C#" color="rgb(200,0,150)" progress="30" />
+      <Progress lang="Python" color="green" progress="30" />
+      <Progress lang="Tooling" color="rgb(200,200,20)" progress="70" />
+    </div>
     <h1>This is a Heading 1</h1>
 
     <p>
@@ -53,3 +58,11 @@ import Progress from "../components/Progress.astro";
     <code lang="javascript"> console.log("Hello, world!"); </code>
   </main>
 </Layout>
+
+<style>
+  .learning-progress {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+  }
+</style>
