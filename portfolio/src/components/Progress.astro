@@ -1,0 +1,39 @@
+---
+interface Props {
+	lang: string;
+	progress: string;
+	color: string;
+}
+
+const { lang, progress, color } = Astro.props;
+---
+
+<div class="progress">
+  <h3 class="lang">{lang}</h3>
+  <div class="progress-bar" role="progressbar" style={`width: ${progress}%`}>
+    <span class="sr-only">{progress}%</span>
+  </div>
+</div>
+
+<style define:vars={{color}}>
+  .progress {
+    margin: 10px 0;
+  }
+  .progress h3.lang {
+    margin-bottom: 10px;
+    color: var(--color, #007bff);
+    text-shadow: 0 0 2px var(--color, #007bff);
+  }
+  .progress-bar {
+    background-color: var(--color, #007bff);
+    border-radius: 1rem;
+    padding: .25em;
+    box-shadow: 3px 1px 5px var(--color, #007bff);
+  }
+  .progress-bar span {
+    margin-left: .5em;
+  }
+  .lang {
+    margin-bottom: 5px;
+  }
+</style>

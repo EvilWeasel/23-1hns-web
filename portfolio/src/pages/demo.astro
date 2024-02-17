@@ -1,0 +1,55 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Progress from "../components/Progress.astro";
+---
+
+<Layout title="Welcome to Astro.">
+  <main>
+    <Progress lang="TypeScript" color="blue" progress="50" />
+    <h1>This is a Heading 1</h1>
+
+    <p>
+      This is a paragraph. It might contain <a href="#">a link</a> or some <em
+        >emphasized text</em
+      >.
+    </p>
+
+    <h2>Heading 2: A Subheading</h2>
+
+    <p>
+      Another paragraph to showcase <strong>strong text</strong> and maybe some <code
+        >code snippets</code
+      >.
+    </p>
+
+    <h3>Heading 3: Sub-subheading</h3>
+
+    <blockquote>
+      This is a blockquote. It's like a fancy way of quoting someone or citing
+      text.
+    </blockquote>
+
+    <p>Let's list some items:</p>
+
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+
+    <p>And here's an ordered list:</p>
+
+    <ol>
+      <li>First item</li>
+      <li>Second item</li>
+      <li>Third item</li>
+    </ol>
+
+    <p>
+      Lastly, a <mark>marked text</mark> and some <abbr title="Abbreviation"
+        >abbr</abbr
+      > for good measure.
+    </p>
+    <code lang="javascript"> console.log("Hello, world!"); </code>
+  </main>
+</Layout>
