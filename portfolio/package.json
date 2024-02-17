@@ -16,7 +16,17 @@
     "typescript": "^5.3.3"
   },
   "devDependencies": {
+    "@astrojs/language-server": "^2.7.4",
     "@iconify-json/devicon": "^1.1.35",
-    "@iconify-json/mdi": "^1.1.64"
+    "@iconify-json/mdi": "^1.1.64",
+    "@typescript-eslint/parser": "^7.0.1",
+    "eslint": "^8.56.0",
+    "eslint-plugin-astro": "^0.31.4",
+    "postcss-html": "^1.6.0",
+    "prettier": "^3.2.5",
+    "prettier-plugin-astro": "^0.13.0",
+    "stylelint": "^16.2.1",
+    "stylelint-config-html": "^1.1.0",
+    "stylelint-config-standard": "^36.0.0"
   }
 }
