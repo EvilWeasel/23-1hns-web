@@ -15,6 +15,8 @@ const { title } = Astro.props;
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/src/styles/fonts.css" />
+    <script src="/src/scripts/theme-toggle.js" defer></script>
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
@@ -25,52 +27,6 @@ const { title } = Astro.props;
   </body>
 </html>
 <style is:global>
-  @font-face {
-    font-family: "MonaspaceArgonVar";
-    src: url("/fonts/MonaspaceArgonVarVF[wght,wdth,slnt].woff2") format("woff2");
-    font-weight: 100 125;
-    font-stretch: 200% 800%;
-    font-size: 10px 48px;
-    font-style: oblique -11deg 0deg;
-  }
-
-  @font-face {
-    font-family: "MonaspaceKryptonVar";
-    src: url("/fonts/MonaspaceKryptonVarVF[wght,wdth,slnt].woff2")
-      format("woff2");
-    font-weight: 100 125;
-    font-stretch: 200% 800%;
-    font-size: 10px 48px;
-    font-style: oblique -11deg 0deg;
-  }
-
-  @font-face {
-    font-family: "MonaspaceNeonVar";
-    src: url("/fonts/MonaspaceNeonVarVF[wght,wdth,slnt].woff2") format("woff2");
-    font-weight: 100 125;
-    font-stretch: 200% 800%;
-    font-size: 10px 48px;
-    font-style: oblique -11deg 0deg;
-  }
-
-  @font-face {
-    font-family: "MonaspaceRadonVar";
-    src: url("/fonts/MonaspaceRadonVarVF[wght,wdth,slnt].woff2") format("woff2");
-    font-weight: 100 125;
-    font-stretch: 200% 800%;
-    font-size: 10px 48px;
-    font-style: oblique -11deg 0deg;
-  }
-
-  @font-face {
-    font-family: "MonaspaceXenonVar";
-    src: url("/fonts/MonaspaceXenonVarVF[wght,wdth,slnt].woff2") format("woff2");
-    font-weight: 100 125;
-    font-stretch: 200% 800%;
-    font-size: 10px 48px;
-    font-style: oblique -11deg 0deg;
-  }
-
   :root {
     --accent: 136, 58, 234;
     --accent-light: 224, 204, 250;
@@ -91,7 +47,7 @@ const { title } = Astro.props;
     margin: auto;
     padding: 1rem;
     width: 1200px;
-    max-width: calc(100% - 2rem);
+    max-width: calc(100% - 4rem);
     font-size: 1.2rem;
     font-family: MonaspaceArgonVar, sans-serif;
     font-variation-settings:

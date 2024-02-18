@@ -4,42 +4,54 @@ import me from "../assets/me.webp";
 ---
 
 <section class="hero">
-    <div class="hero-text">
-        <h1>Why?</h1>
-        <div>
-            <p>Die digitale Transformation stellt Unternehmen, Mitarbeitende und Lernende vor große Herausforderungen. Jeder steht vor der Notwendigkeit, neue Kompetenzen aufzubauen -  die stetige Entwicklung digitaler Prozesse wird letztlich von Menschen vorangetrieben.</p>
-            <p>Wir, die LUTZ + GRUB ACADEMY GmbH, befähigen zum adaptiven und lebenslangen Lernen, um individuell und kollektiv erfolgreich handeln zu können.</p>
-            <p>Durch innovative und Kontext angepasste Lernmethoden erreichen Organisationen und Lernende Kompetenzen, um ihre beruflichen Ziele zu erreichen.</p>
-            <p>Adaptive Growing® - be competent!</p>
-        </div>
+  <div class="hero-text">
+    <h1>Why?</h1>
+    <div>
+      <p>
+        Wir, die LUTZ + GRUB ACADEMY GmbH, befähigen zum adaptiven und
+        lebenslangen Lernen, um individuell und kollektiv erfolgreich handeln zu
+        können.
+      </p>
+      <p>
+        Durch innovative und Kontext angepasste Lernmethoden erreichen
+        Organisationen und Lernende Kompetenzen, um ihre beruflichen Ziele zu
+        erreichen.
+      </p>
+      <p>Adaptive Growing® - be competent!</p>
     </div>
-    <div class="hero-image">
-        <Image src={me} alt="Ich, einfach unverbesserlich." id={"me-image"}/>
-    </div>
+  </div>
+  <div class="hero-image">
+    <Image src={me} alt="Ich, einfach unverbesserlich." id={"me-image"} />
+  </div>
 </section>
-    
-<style>
-    section.hero {
-        margin-bottom: 4rem;
-        display: flex;
-        flex-direction: row;
-        height: 90vh;
-    }
 
-    section.hero > div.hero-text {
-        max-width: 50vw;
-        margin: 0 4rem 0 auto;
-    }
-    section.hero > div.hero-image {
-        width: 50vw;
-    }
-    .hero-text p {
-        max-width: 45ch;
-    }
-    .hero-image > #me-image {
-        object-fit: cover;
-        height: 100%;
-        overflow-x: hidden;
-        width: 100%;
-    }
+<style>
+  section.hero {
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: row;
+    min-height: 90vh;
+    align-items: center;
+    justify-content: center;
+  }
+
+  section.hero > div.hero-text {
+    max-width: 50vw;
+    margin: 0 4rem 0 auto;
+    width: 50vw;
+  }
+  section.hero > div.hero-image {
+    position: relative;
+    height: 100%;
+    width: 50vw;
+  }
+  .hero-text p {
+    max-width: 45ch;
+  }
+  .hero-image > #me-image {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 1.3rem;
+  }
 </style>

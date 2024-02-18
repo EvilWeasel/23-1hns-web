@@ -1,0 +1,41 @@
+.sl-markdown-content pre {
+  margin-top: 0 !important;
+}
+
+body {
+  font-family: "MonaspaceXenonVar", monospace;
+  font-variation-settings:
+  "wght" 100,
+  "wdth" 100,
+  "slnt" 0; /* Set your default values here */
+}
+main {
+  font-family: "MonaspaceNeonVar", monospace;
+}
+
+code {
+  font-family: "MonaspaceKryptonVar", monospace;
+}
+
+.sidebar-content summary {
+  font-family: "MonaspaceXenonVar", monospace;
+  font-variation-settings:
+  "wght" 300,
+  "wdth" 110,
+  "slnt" 0; /* Set your default values here */
+}
+
+.sidebar-content summary+ul > li > a {
+  font-family: "MonaspaceArgonVar", monospace;
+  font-variation-settings:
+  "wght" 100,
+  "wdth" 100,
+  "slnt" 0; /* Set your default values here */
+  transition: font-variation-settings .25s ease;
+}
+.sidebar-content summary+ul > li:hover > a {
+  font-variation-settings:
+  "wght" 500,
+  "wdth" 105,
+  "slnt" -11; /* Set your default values here */
+}

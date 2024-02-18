@@ -13,13 +13,22 @@ import { Icon } from "astro-icon/components";
     <li><a href="/docs">Docs</a></li>
   </ul>
   <div class="theme-switch">
-    <Icon name="mdi:shield-moon" />
-    <Icon name="mdi:shield-sun" />
+    <Icon name="mdi:shield-moon" class={"mooon"} />
+    <Icon name="mdi:shield-sun" class={"sun"} />
   </div>
 </nav>
 
 <style>
-  [data-icon="mdi:shield-moon"] {
+  body.dark-mode [data-icon="mdi:shield-moon"] {
+    display: none;
+  }
+  body.dark-mode [data-icon="mdi:shield-sun"] {
+    display: block;
+  }
+  body:not(.dark-mode) [data-icon="mdi:shield-moon"] {
+    display: block;
+  }
+  body:not(.dark-mode) [data-icon="mdi:shield-sun"] {
     display: none;
   }
   .theme-switch {
@@ -35,7 +44,7 @@ import { Icon } from "astro-icon/components";
   [data-icon="devicon:archlinux-wordmark"] {
     width: 120px;
     height: auto;
-    margin: -1rem 0;
+    margin: -0.5rem 0;
   }
   nav {
     display: flex;
@@ -51,23 +60,31 @@ import { Icon } from "astro-icon/components";
     flex-direction: row;
     gap: 1rem;
     font-size: 1.2em;
+    align-items: center;
   }
   nav ul > li:first-child a {
     border-left: 1px solid #cfcfcf;
     padding-left: 1rem;
   }
-  nav ul > li a {
+  nav ul a {
     border-right: 1px solid #cfcfcf;
     padding-right: 1rem;
-  }
-  nav ul li a {
-    color: #cfcfcf;
+    color: hsl(0, 0%, 81%);
     text-decoration: none;
-    transition: all 0.5s ease-out;
+    font-family: "MonaspaceXenonVar";
+    font-variation-settings:
+      "wght" 100,
+      "wdth" 100,
+      "slnt" 0;
+    transition: all 0.25s ease-in;
   }
-  nav ul li a:hover {
+  nav ul a:hover {
     text-shadow: 0px 0px 15px #da6bff;
     color: #da6bff;
+    font-variation-settings:
+      "wght" 500,
+      "wdth" 100,
+      "slnt" -11;
   }
   .dark-mode {
     background-color: #1a1a1a;
