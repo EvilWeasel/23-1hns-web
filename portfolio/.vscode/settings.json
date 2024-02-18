@@ -9,5 +9,8 @@
   "editor.defaultFormatter": "astro-build.astro-vscode",
   "[astro]": {
     "editor.defaultFormatter": "astro-build.astro-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
