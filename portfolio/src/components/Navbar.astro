@@ -1,5 +1,5 @@
 ---
-import { Icon } from 'astro-icon/components';
+import { Icon } from "astro-icon/components";
 ---
 
 <nav>
@@ -7,9 +7,10 @@ import { Icon } from 'astro-icon/components';
     <Icon name="devicon:archlinux-wordmark" />
   </div>
   <ul class="nav-links">
-    <li><a href="">About Me</a></li>
-    <li><a href="">Projects</a></li>
-    <li><a href="">Contact</a></li>
+    <li><a href="#about-me">About Me</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="/docs">Docs</a></li>
   </ul>
   <div class="theme-switch">
     <Icon name="mdi:shield-moon" />
@@ -43,13 +44,21 @@ import { Icon } from 'astro-icon/components';
     justify-content: space-between;
     max-height: 10vh;
   }
-  nav ul {
+  nav ul.nav-links {
     list-style-type: none;
     padding-left: 0;
     display: flex;
     flex-direction: row;
     gap: 1rem;
     font-size: 1.2em;
+  }
+  nav ul > li:first-child a {
+    border-left: 1px solid #cfcfcf;
+    padding-left: 1rem;
+  }
+  nav ul > li a {
+    border-right: 1px solid #cfcfcf;
+    padding-right: 1rem;
   }
   nav ul li a {
     color: #cfcfcf;
