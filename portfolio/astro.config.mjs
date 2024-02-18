@@ -1,18 +1,21 @@
 import { defineConfig } from "astro/config";
 import icon from "astro-icon";
-
 import starlight from "@astrojs/starlight";
+import { astroExpressiveCode } from "astro-expressive-code";
+import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
   integrations: [
     icon(),
+    astroExpressiveCode(),
     starlight({
       title: "Evil Docs",
       defaultLocale: "de",
+      customCss: ["./src/styles/starlight.css", "./src/styles/fonts.css"],
       sidebar: [
         {
-          label: "🔗Allgemein",
+          label: "🔗Allgemein".toUpperCase(),
           items: [
             {
               label: "⬅️Zurück zum Portfolio",
@@ -43,5 +46,6 @@ export default defineConfig({
         linkedin: "https://www.linkedin.com/in/tobias-wehrle-690509222/",
       },
     }),
+    mdx(),
   ],
 });
