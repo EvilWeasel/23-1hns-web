@@ -225,3 +225,41 @@ console.log(number_generator.next().value);
 let number_generator2 = quadratzahlen_generator();
 console.log(number_generator2.next().value);
 
+console.log("example: lamda vs functions");
+
+function add1(x, y) {
+    return x + y;
+}
+
+let add2 = (x, y) => x + y;
+
+console.log(add1(5,4));
+console.log(add2(40, 2));
+console.log(((x, y) => x + y)(5,2));
+
+name = "Hansi"; 
+let zoo = {
+    name: "Karl",
+    dog: {
+        name: "Kevin",
+        woof: (x) => {
+            console.log(`Hund ${this.name} sagt WOOF!`);
+        },
+        bark() {
+            console.log(`Hund ${this.name} sagt WOOF!`);
+        }
+    }
+};
+
+
+zoo.dog.woof(5);
+zoo.dog.bark();
+
+
+let liste = [1,2,3,4,5,6];
+
+let only_even = liste.filter((value,index,arry) => {
+    return value % 2 == 0;
+});
+console.log(liste);
+console.log(only_even);
