@@ -11,11 +11,19 @@ import { Icon } from 'astro-icon/components';
     <li><a href="">Projects</a></li>
     <li><a href="">Contact</a></li>
   </ul>
-  <div class="theme-switch">
+  <button class="theme-switch">
     <Icon name="mdi:shield-moon" />
     <Icon name="mdi:shield-sun" />
-  </div>
+  </button>
 </nav>
+
+<script defer>
+  const themeElem = document.querySelector('.theme-switch');
+
+  themeElem.addEventListener("click", () => {
+    console.log("Theme-Toggle clicked");
+  });
+</script>
 
 <style>
   [data-icon="mdi:shield-moon"] {
@@ -59,18 +67,5 @@ import { Icon } from 'astro-icon/components';
   nav ul li a:hover {
     text-shadow: 0px 0px 15px #da6bff;
     color: #da6bff;
-  }
-  .dark-mode {
-    background-color: #1a1a1a;
-    color: #ffffff;
-  }
-
-  .dark-mode nav ul li a {
-    color: #ffffff;
-  }
-
-  .dark-mode nav ul li a:hover {
-    text-shadow: 0px 0px 15px #6b63ff;
-    color: #6b63ff;
   }
 </style>
