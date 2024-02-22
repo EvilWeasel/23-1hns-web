@@ -13,16 +13,14 @@ import { Icon } from "astro-icon/components";
     <ul>
         <li><a href=""><Icon name="mdi:mastodon"/></a></li>
         <li><a href=""><Icon name="mdi:youtube"/></a></li>
-        <li><a href=""><Icon name="mdi:instagram"/></a></li>
+        <li><a href=""><Icon name="mdi:github"/></a></li>
     </ul>
-    <p>Copyright 2024™️ All rights reserved</p>
 </footer>
 
 <style>
     footer {
         position: block;
         width: 100%;
-        color: white;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         text-align: center;
         margin-top: 10px;
@@ -40,8 +38,17 @@ import { Icon } from "astro-icon/components";
         text-decoration: none;
         color: gold;
         transition: color .3s ease;
+        text-shadow: 0 0 4px rgba(255, 217, 0, 0.75);
     }
     footer a:hover {
         color: chocolate;
+    }
+    html.light footer a {
+        text-shadow: 0 0 4px black;
+    }
+    html.light footer [data-icon] {
+        /* filter: drop-shadow(0 0 4px black); */
+        stroke: rgba(0, 0, 0, 0.7);
+        font-size: 1.4em;
     }
 </style>

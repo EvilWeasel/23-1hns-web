@@ -47,6 +47,7 @@ const { title } = Astro.props;
 		width: 1200px;
 		max-width: calc(100% - 2rem);
 		font-size: 1.2rem;
+		color: white;
 	}
 	code {
 		font-family:
@@ -59,8 +60,10 @@ const { title } = Astro.props;
 			Courier New,
 			monospace;
 	}
-
 	html.light {
 		background-color: rgb(240, 235, 255);
+	}
+	html.light body {
+		color: black;
 	}
 </style>
