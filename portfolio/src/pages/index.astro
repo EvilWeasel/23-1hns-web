@@ -10,37 +10,48 @@ import image3 from "../assets/cardimage3.jpg";
 
 <Layout title="Welcome to Astro.">
   <main>
-    <Hero />
-    <div class="skill-grid">
-      <Progress language={"TypeScript"} color={"blue"} progressValue={20} />
-      <Progress language={"C#"} color={"rgb(100, 0, 200)"} progressValue={50} />
-      <Progress language={"SQL"} color={"orange"} progressValue={60} />
-      <Progress
-        language={"HTML/CSS"}
-        color={"rgb(151, 0, 30)"}
-        progressValue={20}
-      />
-    </div>
-    <div class="card-container">
-      <Card
-        image={image1}
-        alt="Projekt 1"
-        title="Projekt 1"
-        body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, quos."
-      />
-      <Card
-        image={image2}
-        alt="Projekt 2"
-        title="Projekt 2"
-        body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, quos."
-      />
-      <Card
-        image={image3}
-        alt="Projekt 3"
-        title="Projekt 3"
-        body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, quos."
-      />
-    </div>
+    <section id="hero">
+      <Hero />
+    </section>
+    <section id="skills">
+      <div class="skill-grid">
+        <Progress language={"TypeScript"} color={"blue"} progressValue={20} />
+        <Progress
+          language={"C#"}
+          color={"rgb(100, 0, 200)"}
+          progressValue={50}
+        />
+        <Progress language={"SQL"} color={"orange"} progressValue={60} />
+        <Progress
+          language={"HTML/CSS"}
+          color={"rgb(151, 0, 30)"}
+          progressValue={20}
+        />
+      </div>
+    </section>
+    <section id="projects">
+      <div class="card-container">
+        <Card
+          image={image1}
+          alt="Projekt 1"
+          title="Projekt 1"
+          body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, quos."
+        />
+        <Card
+          image={image2}
+          alt="Projekt 2"
+          title="Projekt 2"
+          body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, quos."
+        />
+        <Card
+          image={image3}
+          alt="Projekt 3"
+          title="Projekt 3"
+          body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, quos."
+        />
+      </div>
+    </section>
+    
   </main>
 </Layout>
 
