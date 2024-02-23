@@ -47,7 +47,7 @@ const { image, alt, title, body } = Astro.props;
     height: auto;
     box-shadow: 5px 5px 30px black;
     overflow-y: hidden;
-    font-size: .9em;
+    font-size: 1em;
   }
   .swipe-up {
     position: absolute;
@@ -60,10 +60,18 @@ const { image, alt, title, body } = Astro.props;
   .text-box {
     position: absolute;
     bottom: 0;
-    padding: 2rem 2rem;
+    width: 100%;
+    height: 100%;
   }
-  .text-box > * {
+  .text-box > h3 {
+    margin-top: 5em;
+    margin-bottom: .2em;
     text-align: end;
+    padding: 0 1rem;
+  }
+  .text-box > p {
+    text-align: end;
+    padding: 0 1rem;
   }
   html.dark .text-box > * {
     text-shadow: 0 0 4px black;
