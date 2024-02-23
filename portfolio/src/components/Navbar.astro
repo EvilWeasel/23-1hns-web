@@ -119,11 +119,20 @@ import { Icon } from 'astro-icon/components';
   nav ul li a {
     color: #cfcfcf;
     text-decoration: none;
-    transition: all 0.5s ease-out;
+    transition: all .5s ease-out;
+    font-family: MonaspaceXenonVar;
+    font-variation-settings:
+      "wght" 100,
+      "wdth" 100,
+      "slnt" 0;
   }
   nav ul li a:hover {
     text-shadow: 0px 0px 15px #da6bff;
     color: #da6bff;
+    font-variation-settings:
+      "wght" 500,
+      "wdth" 100,
+      "slnt" -11;
   }
 
   nav button.theme-switch {

@@ -5,13 +5,18 @@ import me from "../assets/me.webp";
 
 <section class="hero">
     <div class="hero-text">
-        <h1>Why?</h1>
-        <div>
-            <p>Die digitale Transformation stellt Unternehmen, Mitarbeitende und Lernende vor große Herausforderungen. Jeder steht vor der Notwendigkeit, neue Kompetenzen aufzubauen -  die stetige Entwicklung digitaler Prozesse wird letztlich von Menschen vorangetrieben.</p>
-            <p>Wir, die LUTZ + GRUB ACADEMY GmbH, befähigen zum adaptiven und lebenslangen Lernen, um individuell und kollektiv erfolgreich handeln zu können.</p>
-            <p>Adaptive Growing® - be competent!</p>
-        </div>
-    </div>
+        <p class="greeting">Hi, ich bin</p>
+        <h2>Tobias Wehrle</h2>
+        <h3>
+          Developer; Trainer; Gamer;
+        </h3>
+        <p>
+          Leidenschaftlicher Beibringer von Wissen und Programmierer. In meiner Welt
+          verschmelzen Technologie und Bildung zu einzigartigen Erlebnissen. Stets
+          auf der Suche nach neuen Herausforderungen und Wegen, um Wissen
+          spielerisch zu vermitteln.
+        </p>
+      </div>
     <div class="hero-image">
         <Image src={me} alt="Ich, einfach unverbesserlich." id={"me-image"}/>
     </div>
@@ -30,17 +35,42 @@ import me from "../assets/me.webp";
         flex-direction: column;
         justify-content: center;
         max-width: 50vw;
-        margin: 0 0 0 auto;
+        margin: 0 5vw 0 auto;
         position: relative;
         z-index: -2;
     }
     section.hero > div.hero-image {
-        width: 50vw;
+        width: 40vw;
         position: relative;
         z-index: 10;
     }
+    .hero-text > * {
+        text-align: center;
+    }
+    .hero-text > :not(:last-child) {
+        line-height: 100%;
+    }
+    .hero-text > p.greeting {
+        font-size: 1.3em;
+        color: rgb(255, 110, 195);
+        margin: 0;
+    }
+    .hero-text > h2 {
+        margin-top: .5rem;
+        font-size: 3em;
+        font-weight: 800;
+        margin: .5rem 0 1.4rem 0;
+    }
+    .hero-text > h3 {
+        color: rgb(200 140 255);
+        font-size: 1.4em;
+        font-weight: 600;
+        margin-top: 1rem;
+        margin: 0 0 1rem 0;
+    }
     .hero-text p {
         max-width: 45ch;
+        font-size: 1.1em;
     }
     .hero-image > #me-image {
         object-fit: cover;
@@ -51,7 +81,6 @@ import me from "../assets/me.webp";
     @media only screen and (max-width: 900px) {
         section.hero {
             flex-direction: column;
-            height: fit-content;
             font-size: .9em;
         }
         section.hero > div.hero-text {
