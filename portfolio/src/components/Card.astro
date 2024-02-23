@@ -4,31 +4,40 @@ import { Image } from "astro:assets";
 interface Props {
   image: ImageMetadata;
   alt: string;
+  title: string;
+  body: string;
 }
 
-const { image, alt } = Astro.props;
+const { image, alt, title, body } = Astro.props;
 ---
 
 <div class="card">
   <Image src={image} alt={alt} id={"card-image"} />
-  <svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <linearGradient id="gradient" x1="0%" x2="0%" y1="0%" y2="100%">
-        <stop offset="0%" stop-color="#2a73f5"></stop>
-        <stop offset="100%" stop-color="#fc46d5"></stop>
-      </linearGradient>
-    </defs>
-    <path
-      d="
-        M 0 600
-        L 0 240
-        L 450 150
-        C 450 150 600 100 600 240
-        L 600 600
-        L 0 600
-        "
-    ></path>
-  </svg>
+  <div class="swipe-up">
+    <div class="text-box">
+      <h3>{title}</h3>
+      <p>{body}</p>
+    </div>
+    <svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="gradient" x1="0%" x2="0%" y1="0%" y2="100%">
+          <stop offset="0%" stop-color="#fc46d5"></stop>
+          <stop offset="100%" stop-color="#2a73f5"></stop>
+        </linearGradient>
+      </defs>
+      <path
+        d="
+          M 0 600
+          L 0 240
+          L 450 150
+          C 450 150 600 100 600 240
+          L 600 600
+          L 0 600
+          "
+      ></path>
+    </svg>
+  </div>
+
 </div>
 
 <style>
@@ -36,19 +45,53 @@ const { image, alt } = Astro.props;
     position: relative;
     width: 300px;
     height: auto;
+    box-shadow: 5px 5px 30px black;
+    overflow-y: hidden;
+    font-size: .9em;
+  }
+  .swipe-up {
+    position: absolute;
+    transition: top .5s ease;
+    top: 210px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .text-box {
+    position: absolute;
+    bottom: 0;
+    padding: 2rem 2rem;
+  }
+  .text-box > * {
+    text-align: end;
+  }
+  html.dark .text-box > * {
+    text-shadow: 0 0 4px black;
   }
   svg {
-    stroke-width: 0.5rem;
+    stroke-width: 1px;
     fill: url(#gradient);
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    margin-top: 0.3rem;
+    margin-top: .3rem;
+    filter: drop-shadow(0 0 10px #fc46d5);
+    z-index: -1;
+  }
+  .card:hover .swipe-up {
+    top: 30px;
   }
   #card-image {
+    position: relative;
     width: 100%;
     height: 100%;
+    z-index: -2;
+  }
+  .card,
+  svg,
+  #card-image {
+    border-radius: 2.4rem;
   }
 </style>
