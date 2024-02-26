@@ -82,6 +82,8 @@ import me from "../assets/me.webp";
         section.hero {
             flex-direction: column;
             font-size: .9em;
+            height: fit-content;
+            align-items: center;
         }
         section.hero > div.hero-text {
             max-width: none;
@@ -89,7 +91,8 @@ import me from "../assets/me.webp";
             position: static;
         }
         section.hero > div.hero-image {
-            width: 100%;
+            max-width: 80%;
+            min-width: 70%;
             position: static;
         }
         .hero-text p {
