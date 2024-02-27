@@ -1,0 +1,33 @@
+---
+interface Props {
+
+}
+---
+
+<div class="outer-box">
+    <select name="lang" id="lang">
+        <option value="ger-de" label="Deutsch" />
+        <option value="eng-us" label="Englisch" />
+    </select>
+    <div class="inner-box">
+        <p data-fact class="fact">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam impedit distinctio quos fugiat sit excepturi veniam iusto commodi incidunt, adipisci exercitationem ipsum ipsam voluptas!
+        </p>
+    </div>
+    <button>Get a random fact about cats</button>
+</div>
+
+<style>
+    .outer-box {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding: 2rem;
+        background-color: rgb(100,100,100);
+    }
+    .inner-box {
+        padding: 1.5rem;
+        margin: 1rem 0;
+        background-color: rgba(200,200,200,.7);
+    }
+</style>

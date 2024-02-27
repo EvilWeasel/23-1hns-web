@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import Progress from "../components/Progress.astro";
 import Card from "../components/Card.astro";
+import Factbox from "../components/Factbox.astro";
 import image1 from "../assets/cardimage1.jpg";
 import image2 from "../assets/cardimage2.jpg";
 import image3 from "../assets/cardimage3.jpg";
@@ -65,7 +66,9 @@ import image3 from "../assets/cardimage3.jpg";
         />
       </div>
     </section>
-    
+    <section id="cat-facts">
+      <Factbox />
+    </section>
   </main>
 </Layout>
 
@@ -92,5 +95,6 @@ import image3 from "../assets/cardimage3.jpg";
     flex-wrap: wrap;
     gap: 4rem;
     justify-content: center;
+    margin-bottom: 4rem;
   }
 </style>
